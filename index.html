@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <title>Redirecting to submint.io ...</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        html, body {
+            min-height: 100%;
+        }
+
+        body {
+            background-color: #1A202C;
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        .info {
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info p {
+            font-size: 24px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const [ens] = location.hostname.match(/(.*\.eth)(\.limo)?/i);
+            const submint = `https://submint.io/mint/${ens}`;
+            document.location.href = submint;
+        });
+
+        function info(ens, submint) {
+            const div = document.createElement('div');
+            div.classList.add('info');
+            const p = document.createElement('p');
+            const title = `Redirecting from ${ens} to ${submit}`;
+            p.innerHTML = title;
+            div.appendChild(p);
+            document.body.appendChild(div);
+
+            const titleElement = document.querySelector('title');
+            titleElement.innerHTML = title;
+        }
+    </script>
+</head>
+
+<body></body>
+
+</html>
